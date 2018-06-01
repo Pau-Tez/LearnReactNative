@@ -12,6 +12,7 @@ import { DrawerNavigator, StackNavigator, TabNavigator } from 'react-navigation'
 // StackNavigator screens
 import ItemList from './ItemList'
 import Item from './Item'
+import Buttons from './components/Buttons'
 
 // TabNavigator screens
 import TabA from './TabA'
@@ -24,6 +25,7 @@ import Plain from './Plain'
 export const Stack = StackNavigator({
   ItemList: { screen: ItemList },
   Item: { screen: Item },
+  Buttons: { screen: Buttons },
 }, {
   initialRouteName: 'ItemList',
 })

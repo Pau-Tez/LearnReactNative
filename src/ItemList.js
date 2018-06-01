@@ -8,10 +8,7 @@ import {
 
 
 const items = [
-  { name: 'one'},
-  { name: 'two'},
-  { name: 'three'},
-  { name: 'four'},
+  { name: 'Buttons'}
 ]
 
 class ItemList extends Component {
@@ -25,7 +22,7 @@ class ItemList extends Component {
       <TouchableOpacity
         key={i}
         style={styles.item}
-        onPress={() => this.props.navigation.navigate('Item', { title: item.name })}
+        onPress={() => this.props.navigation.navigate( item.name )}
       >
         <Text style={styles.itemText}>{item.name}</Text>
       </TouchableOpacity>)
@@ -34,7 +31,6 @@ class ItemList extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>I'm a StackNavigator!</Text>
         {items.map(this.renderItem)}
       </View>
       )
@@ -57,7 +53,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   item: {
-    padding: 10,
+    padding: 50,
   },
   itemText: {
     color: 'white',
